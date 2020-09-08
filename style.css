@@ -261,7 +261,8 @@ input:-webkit-autofill:focus {
     }
     .home-area .mobile-image {
         width: 100%;
-        padding-top: 8vh;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
        
        
     }
