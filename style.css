@@ -262,7 +262,7 @@ input:-webkit-autofill:focus {
     .home-area .mobile-image {
         width: 100%;
         padding-top: 4vh;
-        padding-bottom: 4vh;
+        padding-bottom: 2vh;
        
        
     }
@@ -293,6 +293,10 @@ input:-webkit-autofill:focus {
     }
     .section-padding-top {
         padding-top: 40px;
+        
+    }
+    .section-padding-top-2 {
+        padding-top: 25px;
         
     }
     
@@ -333,6 +337,10 @@ input:-webkit-autofill:focus {
 
     .section-padding-top {
         padding-top: 120px;
+        
+    }
+    .section-padding-top-2 {
+        padding-top: 40px;
         
     }
     
@@ -391,6 +399,10 @@ input:-webkit-autofill:focus {
     }
     .section-padding-top {
         padding-top: 120px;
+        
+    }
+    .section-padding-top-2 {
+        padding-top: 40px;
         
     }
     
