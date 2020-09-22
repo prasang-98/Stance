@@ -308,7 +308,7 @@
         <!-- Footer-Bootom-End -->
     </footer>
     <!-- Footer-Area-End -->
-
+    <div id="snackbar"></div>
  
     <!--Vendor-JS-->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -338,10 +338,18 @@
                 type:'post',
                 data:$("#myForm").serializeArray(),
                 success: function(){
-                alert("Form Data Submitted :)")
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    x.innerHTML = "Submitted Successfully";
+                    x.style.backgroundColor = "#90ee90";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
                 },
                 error: function(){
-                alert("There was an error :(")
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    x.innerHTML = "There was an error. Please retry.";
+                    x.style.backgroundColor = "#ff0033";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
                 }
             });
         }
