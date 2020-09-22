@@ -50,21 +50,12 @@
                 <ul class="nav navbar-nav mainmenu">
                     <li class="active"><a href="#home_page">Home</a></li>
                     <li><a href="for_organisation.html">For organisations</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contact_page">Contacts</a></li>
+                    <!-- <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#contact_page">Contacts</a></li> -->
                 </ul>
-                <div class="right-button hidden-xs">
+                <!-- <div class="right-button hidden-xs">
                     <a href="#" onclick="showForm()">Sign Up</a>
-                </div>
-                <div id="signUpForm">
-                    <form id="myForm">
-                        <label>Email</label>
-                        <br/>
-                        <input name="email" />
-                        <br/>
-                    </form>
-                    <button onclick="SubForm()">Submit</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
@@ -266,7 +257,19 @@
                         <p>Good posture means the body is relaxed because the muscles are not straining to stay upright. Want to be better? We have got you <b>back.</b> </p>
                     </div>
                     <div class="space-50"></div>
-                    <a href="#" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Subscribe</a>
+                    <div id="signUpForm">
+                        <form id="myForm">
+                            <div class="form-group">
+                            <label>Email</label>
+                            <input name="email" class="form-control" />
+                            </div>
+                            <br/>
+                            <br/>
+                        </form>
+                        <!-- <button onclick="SubForm()">Submit</button> -->
+                    <a href="#" onclick="SubForm()" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Submit</a>
+                </div>
+
                 </div>
             </div>
         </div>
