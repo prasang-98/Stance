@@ -53,9 +53,6 @@
                     <!-- <li><a href="blog.html">Blog</a></li>
                     <li><a href="#contact_page">Contacts</a></li> -->
                 </ul>
-                <!-- <div class="right-button hidden-xs">
-                    <a href="#" onclick="showForm()">Sign Up</a>
-                </div> -->
             </div>
         </div>
     </nav>
@@ -84,7 +81,18 @@
                             70% of population suffers from bad posture, responsible for back pain, impaired lungs function, decline in focus, etc. Test your posture with stance in a minute. Know whats wrong and workout with us to achieve your best possible pose.</p>
                     </div>
                     <div class="section-padding-top-2"></div>
-                    <a href="#" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Test now</a>
+                    <div class="signUpForm">
+                        <form id="myForm1">
+                            <div class="form-group">
+                            <label>Email</label>
+                            <input name="email" class="form-control" />
+                            </div>
+                            <br/>
+                            <br/>
+                        </form>
+                        <!-- <button onclick="SubForm()">Submit</button> -->
+                        <a href="#" onclick="SubForm1()" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Submit</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -259,8 +267,8 @@
                         <p>Good posture means the body is relaxed because the muscles are not straining to stay upright. Want to be better? We have got you <b>back.</b> </p>
                     </div>
                     <div class="space-50"></div>
-                    <div id="signUpForm">
-                        <form id="myForm">
+                    <div class="signUpForm">
+                        <form id="myForm2">
                             <div class="form-group">
                             <label>Email</label>
                             <input name="email" class="form-control" />
@@ -268,45 +276,15 @@
                             <br/>
                             <br/>
                         </form>
-                        <!-- <button onclick="SubForm()">Submit</button> -->
-                    <a href="#" onclick="SubForm()" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Submit</a>
-                </div>
+                        <a href="#" onclick="SubForm2()" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Submit</a>
+                    </div>
 
                 </div>
             </div>
         </div>
     </section>
     <!-- Gallery-Area-End -->
-    <footer class="footer-area" id="contact_page">
-      
-                
-        <!-- Footer-Bootom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-5">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="lnr lnr-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></span>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <div class="space-30 hidden visible-xs"></div>
-                    </div>
-                    <div class="col-xs-12 col-md-7">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Testimonial</a></li>
-                                <li><a href="#">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer-Bootom-End -->
-    </footer>
+    
     <!-- Footer-Area-End -->
     <div id="snackbar"></div>
  
@@ -324,19 +302,32 @@
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
     <script>
-        function showForm() {
-            var form = document.getElementById("signUpForm");
-            if (form.style.display === "none") {
-                form.style.display = "block";
-            } else {
-                form.style.display = "none";
-            }
-        }
-        function SubForm (){
+        function SubForm1 (){
             $.ajax({
                 url:'https://api.apispreadsheets.com/data/1473/',
                 type:'post',
-                data:$("#myForm").serializeArray(),
+                data:$("#myForm1").serializeArray(),
+                success: function(){
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    x.innerHTML = "Submitted Successfully";
+                    x.style.backgroundColor = "#90ee90";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                },
+                error: function(){
+                    var x = document.getElementById("snackbar");
+                    x.className = "show";
+                    x.innerHTML = "There was an error. Please retry.";
+                    x.style.backgroundColor = "#ff0033";
+                    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                }
+            });
+        }
+        function SubForm2 (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/1473/',
+                type:'post',
+                data:$("#myForm2").serializeArray(),
                 success: function(){
                     var x = document.getElementById("snackbar");
                     x.className = "show";
