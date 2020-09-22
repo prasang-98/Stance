@@ -54,7 +54,16 @@
                     <li><a href="#contact_page">Contacts</a></li>
                 </ul>
                 <div class="right-button hidden-xs">
-                    <a href="#">Sign Up</a>
+                    <a href="#" onclick="showForm()">Sign Up</a>
+                </div>
+                <div id="signUpForm">
+                    <form id="myForm">
+                        <label>Email</label>
+                        <br/>
+                        <input name="email" />
+                        <br/>
+                    </form>
+                    <button onclick="SubForm()">Submit</button>
                 </div>
             </div>
         </div>
@@ -309,6 +318,29 @@
     <script src="js/wow.min.js"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
+    <script>
+        function showForm() {
+            var form = document.getElementById("signUpForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/1473/',
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                alert("Form Data Submitted :)")
+                },
+                error: function(){
+                alert("There was an error :(")
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
