@@ -48,10 +48,8 @@
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
-                    <li class="active"><a href="#home_page">Home</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="for_organisation.html">For organisations</a></li>
-                    <!-- <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contact_page">Contacts</a></li> -->
                 </ul>
             </div>
         </div>
@@ -61,18 +59,16 @@
     <header class="home-area" >
         <div>
             <div class="home_page row">
-                <div class="home_page_cnt_2 col-xl-6">
-                    <div class="iframe-container">
-                        <iframe src="https://www.youtube.com/embed/rSIFKEgRO_w" 
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                <div class="home_page_cnt_2 col-xl-5">
+                    <div class="embed-responsive embed-responsive-16by9"">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rSIFKEgRO_w" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" >
                         </iframe>
                     </div>
                 </div>
-                <div class="home_page_cnt_1 col-xl-6">
-                    <!-- <div class="space-80 hidden-xs"></div> -->
+                <div class="home_page_cnt_1 col-xl-12">
+                    <div class="space-80 hidden-xs"></div>
                     <h1  class="wow fadeInUp" data-wow-delay="0.4s">Let our AI analyse and guide you
-
                         to a better posture.</h1>
                     <div class="space-10"></div>
                     <div class="desc wow fadeInUp" data-wow-delay="0.6s">
@@ -81,24 +77,23 @@
                             70% of population suffers from bad posture, responsible for back pain, impaired lungs function, decline in focus, etc. Test your posture with stance in a minute. Know whats wrong and workout with us to achieve your best possible pose.</p>
                     </div>
                     <div class="section-padding-top-2"></div>
-                    <div class="signUpForm">
+                    <!-- <div class="signUpForm">
                         <form id="myForm1">
                             <div class="form-group">
                             <label>Register for Beta</label>
                             <input name="email" class="form-control" placeholder="Enter your email address"/>
                             </div>
-                            <br/>
-                            <br/>
                         </form>
-                        <!-- <button onclick="SubForm()">Submit</button> -->
                         <a href="#" onclick="SubForm1()" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Submit</a>
-                    </div>
+                    </div> -->
+                    <a href="#signupformdiv" class="bttn-white wow fadeInUp" data-wow-delay="0.8s">Sign up for Beta</a>
                 </div>
             </div>
         </div>
     </header>
     <!-- Home-Area-End -->
-    
+    <div class="space-80 hidden-xs"></div>
+
     <!-- Progress-Area -->
     <section class="progress-area " id="progress_page">
         <div class="container">
@@ -267,12 +262,12 @@
                         <p>Good posture means the body is relaxed because the muscles are not straining to stay upright. Want to be better? We have got you <b>back.</b> </p>
                     </div>
                     <div class="space-50"></div>
-                    <div class="signUpForm">
+                    <div class="signUpForm" id="signupformdiv">
                         <form id="myForm2">
                             <div class="form-group">
                             <label>Register for Beta</label>
                             <div class="space-20"></div>
-                            <input name="email" class="form-control" placeholder="Enter your email address" />
+                            <input name="email" class="form-control" placeholder="Enter your email address" autofocus />
                             </div>
                             <br/>
                             <br/>
